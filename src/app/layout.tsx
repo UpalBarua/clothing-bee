@@ -1,3 +1,5 @@
+import { Navigation } from "@/components/navigation";
+
 import "./globals.css";
 
 type RootLayoutProps = {
@@ -7,7 +9,10 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Navigation />
+        <main className="pt-16">{children}</main>
+      </body>
     </html>
   );
 }
